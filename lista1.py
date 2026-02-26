@@ -1,3 +1,5 @@
+import math
+
 def ex1():
     n = int(input("Digite um numero: "))
     if n > 0:
@@ -80,7 +82,109 @@ def ex9():
     else:
         print("Não tem esse calculo")
 
-ex9()
+def ex10():
+    ano = int(input("Digite o ano desejado: "))
+    conta = ano % 4
+    if conta == 0:
+        conta1 = ano % 100 
+        if conta1 == 00:
+            conta2 = ano % 400
+            if conta2 == 0:
+                print("Ano Bissexto")
+            else:
+                print("Ano normal")
+        else:
+            print("Ano Bissexto")
+    else:
+        print("Ano normal")
+
+def ex11():
+    user = "navi"
+    passw = "n4vi"
+    login = input("Digite seu Login: ")
+    senha = input("Digite sua senha: ")
+    if user == login and passw == senha:
+        print("Login Bem-Sucedido")
+    else:
+        print("Acesso Negado")
+
+def ex12():
+    peso = float(input("Digite o peso: "))
+    altura = float(input("Digite a altura: "))
+    calculo = altura * altura
+    imc = peso / calculo
+    print(imc)
+    if imc < 18.5:
+        print("Abaixo do peso.")
+    elif imc >= 18.5 and imc <= 24.9:
+        print("Peso Ideal")
+    elif imc >= 25.0 and imc <= 29.9:
+        print("Sobrepeso")
+    elif imc >= 30.0 and imc <= 34.9:
+        print("Obesidade Grau 1")
+    elif imc >= 35.0 and imc <= 39.9:
+        print("Obesidade Grau 2")
+    else:
+        print("Obesidade gordao XJ")
+
+def ex13():
+    temp = int(input("Digite a temperatura: "))
+    if temp < 15:
+        print("Frio")
+    elif temp >= 15 and temp <= 25:
+        print("Agradavel")
+    else:
+        print("Quente")
+
+def ex14():
+    n1 = int(input("Digite o primeiro numero: "))
+    n2 = int(input("Digite o segundo numero: "))
+    n3 = int(input("Digite o terceiro numero: "))
+    if n1 > n2 and n1 > n3:
+        print(f"O maior número é {n1}")
+    elif n2 > n1 and n2 > n3:
+        print(f"O maior número é {n2}")
+    else:
+        print(f"O maior número é {n3}")
+
+def ex15():
+    nota = int(input("Digite a nota: "))
+    if nota >= 9:
+        print("Excelente")
+    elif nota >= 7 and nota <= 8:
+        print("Bom")
+    elif nota == 6:
+        print("Regular")
+    else:
+        print("Reprovado")
+
+def ex16():
+    n = int(input("Verifique se o número é primo: "))
+    i = 2
+    while i < n:
+        if n % i == 0:
+            break
+        else:
+            i = i + 1
+    if i == n:
+        print("O número é primo.")
+    else:
+        print("Não é primo")
+
+def ex17():
+    valor = int(input("Valor do produto: "))
+    if valor <= 2000:
+        print("Isento")
+    elif valor > 2000 and valor < 5000:
+        imposto =  valor * 0.10
+        print(f"Imposto de {imposto}")
+    else:
+        imposto1 = valor * 0.20
+        print(f"Imposto de {imposto1}")
 
 
+        
+        
+
+    
 
